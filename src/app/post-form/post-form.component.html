@@ -1,0 +1,13 @@
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Content</label>
+        <textarea type="content" class="form-control" [(ngModel)]="post.body" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="submit()">
+            <ng-container *ngIf="!post.id">Add post</ng-container>
+            <ng-container *ngIf="post.id">Update post</ng-container>
+    </button>
+    <!-- <button type="reset" class="btn btn-primary" (click)="cancel()">
+            Cancel
+    </button> -->
+</form>
